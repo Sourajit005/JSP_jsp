@@ -29,3 +29,6 @@ public class Employee {
         this.age = age;
     }
 }
+
+//Inventory and Stock Application :JDBC, Servlet
+//BookStore

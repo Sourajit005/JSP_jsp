@@ -61,4 +61,18 @@ public class EmployeeService {
         }
         return res;
     }
+
+    public int delete(String name) {
+        int res = 0;
+        String sql = "DELETE FROM employee WHERE name = ?";
+
+        try (PreparedStatement pst = con.prepareStatement(sql)) {
+            pst.setString(1, name);
+            res = pst.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return res;
+    }
+
 }

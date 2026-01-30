@@ -5,7 +5,7 @@
 <form action="update" method="post">
 ID:<input type="text" name="id"><br>
 NAME:<input type="text" name="name"><br>
-EMAIL:<input type="text" name="email"><br>
+AGE:<input type="text" name="age"><br>
 <input type="submit" value="UPDATE">
 </form>
 </body>

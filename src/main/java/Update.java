@@ -1,4 +1,5 @@
 import entity.Employee;
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -33,6 +34,10 @@ public class Update extends HttpServlet {
 
             if (result > 0) {
                 resp.getWriter().print("<h1>Profile Updated Successfully!</h1>");
+                resp.sendRedirect("home.jsp");
+            }else{
+                RequestDispatcher requestDispatcher = req.getRequestDispatcher("home.jsp");
+                requestDispatcher.forward(req, resp);
             }
         } else {
             resp.sendRedirect("login.jsp");
